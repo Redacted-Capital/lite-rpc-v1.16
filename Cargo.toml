@@ -18,15 +18,15 @@ license = "AGPL"
 edition = "2021"
 
 [workspace.dependencies]
-solana-sdk = "1.16.21"
-solana-rpc-client = "1.16.21"
-solana-rpc-client-api = "1.16.21"
-solana-transaction-status = "1.16.21"
-solana-version = "1.16.21"
-solana-client = "1.16.21"
-solana-net-utils = "1.16.21"
-solana-pubsub-client = "1.16.21"
-solana-streamer = "1.16.21"
+solana-sdk = "~1.16.21"
+solana-rpc-client = "~1.16.21"
+solana-rpc-client-api = "~1.16.21"
+solana-transaction-status = "~1.16.21"
+solana-version = "~1.16.21"
+solana-client = "~1.16.21"
+solana-net-utils = "~1.16.21"
+solana-pubsub-client = "~1.16.21"
+solana-streamer = "~1.16.21"
 itertools = "0.10.5"
 serde = { version = "1.0.160", features = ["derive"] }
 serde_json = "1.0.96"
@@ -52,7 +52,7 @@ lazy_static = "1.4.0"
 dotenv = "0.15.0"
 async-channel = "1.8.0"
 quinn = "0.9.3"
-rustls = { version = "=0.20.8", default-features = false }
+rustls = { version = "~0.20.8", default-features = false }
 solana-lite-rpc-services = {path = "services", version="0.2.3"}
 solana-lite-rpc-core = {path = "core", version="0.2.3"}
 solana-lite-rpc-cluster-endpoints = {path = "cluster-endpoints", version="0.2.3"}
