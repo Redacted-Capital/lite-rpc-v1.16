@@ -18,15 +18,15 @@ license = "AGPL"
 edition = "2021"
 
 [workspace.dependencies]
-solana-sdk = "~1.16.3"
-solana-rpc-client = "~1.16.3"
-solana-rpc-client-api = "~1.16.3"
-solana-transaction-status = "~1.16.3"
-solana-version = "~1.16.3"
-solana-client = "~1.16.3"
-solana-net-utils = "~1.16.3"
-solana-pubsub-client = "~1.16.3"
-solana-streamer = "~1.16.3"
+solana-sdk = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
+solana-rpc-client = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
+solana-rpc-client-api = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
+solana-transaction-status = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
+solana-version = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
+solana-client = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
+solana-net-utils = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
+solana-pubsub-client = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
+solana-streamer = { git = "https://github.com/jito-foundation/jito-solana.git", tag = "v1.16.21-jito" }
 itertools = "0.10.5"
 serde = { version = "1.0.160", features = ["derive"] }
 serde_json = "1.0.96"
