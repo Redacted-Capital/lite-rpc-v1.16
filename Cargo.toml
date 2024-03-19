@@ -10,6 +10,8 @@ members = [
     "bench"
 ]
 
+resolver = "2"
+
 [workspace.package]
 version = "0.2.3"
 authors = ["gmgalactus <gmgalactus@mango.markets>", "Aniket Prajapati <contact@aniketprajapati.me>"]

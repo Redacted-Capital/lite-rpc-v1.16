@@ -2,7 +2,7 @@ use std::time::{Duration, Instant};
 
 use anyhow::bail;
 use chrono::Utc;
-use log::{trace, warn};
+use log::{info, trace, warn};
 
 use prometheus::{
     core::GenericGauge, histogram_opts, opts, register_histogram, register_int_counter,
@@ -74,7 +74,7 @@ impl TxSender {
         let txs_sent = self.data_cache.txs.clone();
 
         for transaction_info in &transaction_infos {
-            trace!("sending transaction {}", transaction_info.signature);
+            info!("sending transaction {}", transaction_info.signature);
             txs_sent.insert(
                 transaction_info.signature.clone(),
                 TxProps {
