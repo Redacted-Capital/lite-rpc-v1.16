@@ -17,6 +17,7 @@ pub async fn poll_commitment_slots(
     let mut errors = 0;
     loop {
         let slot = rpc_client.get_slot_with_commitment(commitment_config).await;
+        print!("got slot: {:?}", slot);
         match slot {
             Ok(slot) => {
                 if slot > last_slot {
