@@ -9,6 +9,7 @@ use crate::{
     tx_sender::TxSender,
 };
 use anyhow::bail;
+use log::info;
 use solana_lite_rpc_core::{
     solana_utils::SerializableTransaction, structures::transaction_sent_info::SentTransactionInfo,
     types::SlotStream,
@@ -139,15 +140,18 @@ impl TransactionService {
             slot,
             transaction: raw_tx,
         };
+        info!("Sending transaction {}", transaction_info.signature);
         if let Err(e) = self
             .transaction_channel
             .send(transaction_info.clone())
             .await
         {
-            bail!(
+            info!(
                 "Internal error sending transaction on send channel error {}",
                 e
             );
+        } else {
+            info!("Transaction sent {}", transaction_info.signature);
         }
         let replay_at = Instant::now() + self.replay_offset;
         // ignore error for replay service
